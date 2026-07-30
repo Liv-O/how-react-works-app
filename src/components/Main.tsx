@@ -48,7 +48,6 @@ function Main({
           />
           <ActiveQuiz
             question={questions[index]}
-            points={points}
             dispatch={dispatch}
             answer={answer}
           />
