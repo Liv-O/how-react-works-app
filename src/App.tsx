@@ -64,7 +64,7 @@ function App() {
   const { questions, status, index, points, answer, remainingTime } = state;
 
   useEffect(() => {
-    fetch('http://localhost:8000/questions')
+    fetch('/questions.json')
       .then((response) => response.json())
       .then((data) => dispatch({ type: 'dataRecieved', payload: data }))
       .catch((error) => {
