@@ -66,7 +66,9 @@ function App() {
   useEffect(() => {
     fetch('/questions.json')
       .then((response) => response.json())
-      .then((data) => dispatch({ type: 'dataRecieved', payload: data }))
+      .then((data) =>
+        dispatch({ type: 'dataRecieved', payload: data.questions }),
+      )
       .catch((error) => {
         console.error('Error fetching questions:', error);
         dispatch({ type: 'dataFailed' });
